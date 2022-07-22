@@ -1,0 +1,12 @@
+{
+	"extends": "@sindresorhus/tsconfig/tsconfig.json",
+	"include": [
+		"source"
+	],
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"declaration": false,
+		"sourceMap": true,
+		"outDir": "dist"
+	}
+}
