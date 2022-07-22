@@ -1,13 +1,4 @@
-# telegram-typescript-bot-template
-
-> Template for Telegram bots written in TypeScript
-
-If you haven't written TypeScript before, don't be scared of it.
-It is nearly the same as JavaScript.
-But it provides more helpful information before something goes wrong during the runtime.
-
-I learned a lot about JavaScript itself when I started diving into TypeScript.
-
+> Telegram bot for deletion of Deleted users
 
 ## Install
 

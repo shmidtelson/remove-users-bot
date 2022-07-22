@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"start": "tsc --sourceMap && node --enable-source-maps dist/index.js",
+		"start": "tsc --sourceMap && node --enable-source-maps --experimental-specifier-resolution=node dist/index.js",
 		"test": "tsc --sourceMap && xo && ava"
 	},
 	"type": "module",
@@ -17,6 +17,7 @@
 		"grammy": "^1.4.2",
 		"grammy-inline-menu": "^8.0.0",
 		"telegraf-middleware-console-time": "^2.0.0",
+		"telegram": "^2.9.10",
 		"telegram-format": "^2.1.0"
 	},
 	"devDependencies": {
@@ -24,6 +25,7 @@
 		"@sindresorhus/tsconfig": "^3.0.1",
 		"@types/node": "^16.11.6",
 		"ava": "^4.0.0",
+		"dotenv": "^16.0.1",
 		"typescript": "^4.7.4",
 		"xo": "^0.50.0"
 	},
