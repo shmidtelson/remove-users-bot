@@ -9,6 +9,7 @@ import {useFluent} from '@grammyjs/fluent';
 
 import {fluent, loadLocales} from '../translation.js';
 import {MyContext, Session} from './my-context.js';
+
 import 'dotenv/config'
 
 const stringSessionInstance = new StringSession("");
@@ -38,22 +39,46 @@ if (process.env['NODE_ENV'] !== 'production') {
 	bot.use(generateUpdateMiddleware());
 }
 
-bot.command('removeusers', async ctx => {
+bot.command('removedeletedusers', async ctx => {
 	// Check if group
 	if (ctx.update.message?.chat.type !== 'supergroup') {
 		await ctx.reply('Sorry, but it should be SuperGroup');
 		return
 	}
-
+	const currentBotId = ctx.me.id
 	// Check if admin
 	const chatId = ctx.update.message.chat.id
 	const userId = ctx.update.message.from.id
 
 	const admins  = await bot.api.getChatAdministrators(chatId)
 	const adminIds = admins.map(item => item.user.id)
+	const currentBotAdmin = admins.find(item => item.user.id === currentBotId)
+	const currentUserAdmin = admins.find(item => item.user.id === userId)
+
+	if (!adminIds.includes(currentBotId)) {
+		await ctx.reply('Sorry, but you should add bot to admins and give him ban rights');
+		return
+	}
 
 	if (!adminIds.includes(userId)) {
 		await ctx.reply('Sorry, but only Admins can use this command');
+		return
+	}
+
+	// @ts-ignore
+	if (!currentBotAdmin?.can_restrict_members ) {
+		await ctx.reply('Sorry, but you should give bot ban rights');
+		return
+	}
+
+	const banRights = [
+		currentUserAdmin?.status === 'creator',
+		// @ts-ignore
+		currentUserAdmin?.can_restrict_members
+	]
+
+	if (!banRights.includes(true)) {
+		await ctx.reply('Sorry, but you should have ban rights');
 		return
 	}
 
@@ -75,13 +100,23 @@ bot.command('removeusers', async ctx => {
 		}
 	);
 
+	let countDeletedAccounts = 0
+
 	for(let i = 0; i < users.length; i++){
 		// @ts-ignore
-		console.log(users[i].participant)
+		if (users[i].deleted) {
+			try {
+				// @ts-ignore
+				await bot.api.banChatMember(chatId, parseInt(users[i].participant.userId))
+				countDeletedAccounts += 1
+			} catch (e) {
+				console.log(e)
+			}
+		}
 	}
 
 	let text = '';
-	text += format.bold('Here is your message');
+	text += format.bold(`I deleted ${countDeletedAccounts} accounts (Deleted accounts)`);
 	text += ' ';
 	text += format.spoiler(ctx.match);
 	await ctx.reply(text, {parse_mode: format.parse_mode});
@@ -96,7 +131,7 @@ export async function start(): Promise<void> {
 
 	// The commands you set here will be shown as /commands like /start or /magic in your telegram client.
 	await bot.api.setMyCommands([
-		{command: 'removeusers', description: 'Clean deleted users'},
+		{command: 'removedeletedusers', description: 'Clean deleted users'},
 	]);
 
 	await bot.start({
