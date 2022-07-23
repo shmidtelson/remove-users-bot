@@ -1,7 +1,7 @@
 FROM docker.io/library/node:16-alpine AS builder
 WORKDIR /build
 
-COPY package.json package-lock.json tsconfig.json ./
+COPY package.json yarn.lock tsconfig.json ./
 RUN npm ci
 
 COPY source source
@@ -10,7 +10,7 @@ RUN node_modules/.bin/tsc
 
 FROM docker.io/library/node:16-alpine AS packages
 WORKDIR /build
-COPY package.json package-lock.json ./
+COPY package.json yarn.lock ./
 RUN npm ci --omit=dev
 
 
