@@ -3164,9 +3164,9 @@ telegram-format@^2.1.0:
   integrity sha512-V2thkhKzcNVL26h/ANeat/Z+AXBaDGoizs4cab6Kpq/w+d+Ai6M/AFFkuBwvCkZXqb+7UW2vt3Dko5+kKcOIHg==
 
 telegram@^2.9.10:
-  version "2.9.10"
-  resolved "https://registry.yarnpkg.com/telegram/-/telegram-2.9.10.tgz#1d5b70918483d87c51857bd4d23dbf0fa3bd1cda"
-  integrity sha512-bXpsKFA9SoOHbHX12bVhOqk3bo27tBO8i83yFn59WJXMJ2idwQLAVNjgaYGlJt6CEVeGOivoiOwXVvtsv1FlQQ==
+  version "2.11.7"
+  resolved "https://registry.yarnpkg.com/telegram/-/telegram-2.11.7.tgz#8ba48521ee27939b9f8880eface155f4740086eb"
+  integrity sha512-fMu/+rIdr+tSjFtU1ur+3bcn11ZBzjVRys9lr8WbbDT/h4aSYQdKdOqylq9K284XSw/yVW3dmR5P71ZPrPOJiw==
   dependencies:
     "@cryptography/aes" "^0.1.1"
     async-mutex "^0.3.0"
