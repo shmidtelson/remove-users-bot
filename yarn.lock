@@ -63,10 +63,10 @@
   resolved "https://registry.yarnpkg.com/@grammyjs/storage-file/-/storage-file-2.0.0.tgz#6dde10bbe460785a19046c30538a23930242c8fb"
   integrity sha512-IXkEt5w9bnWbzNmculc1v273rpVLe9glFyWWFMxEV26gLwQnW1JUEms4aSGT8ra+9SVMa/uvJT9wDBwczsJuvQ==
 
-"@grammyjs/types@^2.2.6", "@grammyjs/types@^2.3.1", "@grammyjs/types@^2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@grammyjs/types/-/types-2.8.1.tgz#5e453c07b67c39e29fe2129f5578b9014883a046"
-  integrity sha512-cdeagnRnpahbwxyM4XOQR3EQwKnsmEsIktwRlQNyDz3IXI9YBvbRq2lDtufHxO4t6X07mm1+DiwjKEeYCec5bA==
+"@grammyjs/types@^2.2.6", "@grammyjs/types@^2.3.1", "@grammyjs/types@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@grammyjs/types/-/types-2.9.1.tgz#395d0ec2f13b805b144d7fd8dab9247ac40d5341"
+  integrity sha512-6x2Kj98wm3hcq3YQBhlGrYAuQJu3NAx4OmqnOvbBl/la0TIw/HRpu+AinMfkrgjvxR8KzL5hTWCHSXI6MqAj8Q==
 
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
@@ -1649,11 +1649,11 @@ grammy-inline-menu@^8.0.0:
     "@grammyjs/types" "^2.2.6"
 
 grammy@^1.4.2:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.9.2.tgz#0192756800113b634610454fd9987cc0e312818e"
-  integrity sha512-3u73ov2dJZeUiWKN/N7jgF3XtMFCOcBYsRB+/YjOGVPnk2CDo8n7VLnhH+jznhrqJEgeRB/CqKsP+PIPOUpizA==
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.11.2.tgz#93716c258529e83cdcc03e11e535887cd1005d1f"
+  integrity sha512-R6NlxOAfd3H4eMBU96ARi/kwZXzc3Z8Pj/g7cxmclPsxSXTHItRkY8eagS1Ol1l/CxCkEvQzHslIE9/dZSrqTQ==
   dependencies:
-    "@grammyjs/types" "^2.8.1"
+    "@grammyjs/types" "^2.9.1"
     abort-controller "^3.0.0"
     debug "^4.3.4"
     node-fetch "^2.6.7"
