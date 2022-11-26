@@ -2819,6 +2819,11 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
+real-cancellable-promise@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/real-cancellable-promise/-/real-cancellable-promise-1.1.1.tgz#be793502f7ed8067936d95dc040a2d2a2a1944a7"
+  integrity sha512-vxanUX4Aff5sRX6Rb1CSeCDWhO20L0hKQXWTLOYbtRo9WYFMjlhEBX0E75iz3+7ucrmFdPpDolwLC7L65P7hag==
+
 redent@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/redent/-/redent-4.0.0.tgz#0c0ba7caabb24257ab3bb7a4fd95dd1d5c5681f9"
@@ -3164,9 +3169,9 @@ telegram-format@^2.1.0:
   integrity sha512-V2thkhKzcNVL26h/ANeat/Z+AXBaDGoizs4cab6Kpq/w+d+Ai6M/AFFkuBwvCkZXqb+7UW2vt3Dko5+kKcOIHg==
 
 telegram@^2.9.10:
-  version "2.9.10"
-  resolved "https://registry.yarnpkg.com/telegram/-/telegram-2.9.10.tgz#1d5b70918483d87c51857bd4d23dbf0fa3bd1cda"
-  integrity sha512-bXpsKFA9SoOHbHX12bVhOqk3bo27tBO8i83yFn59WJXMJ2idwQLAVNjgaYGlJt6CEVeGOivoiOwXVvtsv1FlQQ==
+  version "2.14.7"
+  resolved "https://registry.yarnpkg.com/telegram/-/telegram-2.14.7.tgz#9591b5a7406cc9224a57b69dc70eb987718a62bd"
+  integrity sha512-4qY+M4UHwb4xATCXpnMsBwJCMqETiH97jvnd6D8NnMbJlOC4Br049381xx3oHRc5ifTBxXuD64b7jgIR52rWtQ==
   dependencies:
     "@cryptography/aes" "^0.1.1"
     async-mutex "^0.3.0"
@@ -3177,6 +3182,7 @@ telegram@^2.9.10:
     node-localstorage "^2.2.1"
     pako "^2.0.3"
     path-browserify "^1.0.1"
+    real-cancellable-promise "^1.1.1"
     socks "^2.6.2"
     store2 "^2.13.0"
     ts-custom-error "^3.2.0"
