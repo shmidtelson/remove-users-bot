@@ -59,9 +59,9 @@
   integrity sha512-vM/58mhX/wlZWeCL5I/0449EnJM3KB1o+HkD2dZ6eBrbWxQyVxbLffx0ur3BxOtb7BFsUHb7PctxhI0/JN/K2w==
 
 "@grammyjs/storage-file@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@grammyjs/storage-file/-/storage-file-2.0.0.tgz#6dde10bbe460785a19046c30538a23930242c8fb"
-  integrity sha512-IXkEt5w9bnWbzNmculc1v273rpVLe9glFyWWFMxEV26gLwQnW1JUEms4aSGT8ra+9SVMa/uvJT9wDBwczsJuvQ==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@grammyjs/storage-file/-/storage-file-2.0.2.tgz#0c098de0ce136778c67520a9b4b2bb28e853e13f"
+  integrity sha512-RMRljNmxT0WlNG+IgsOEwCarOegvyapu8o9H8ETXFgaE6jzM0rbw/dN0fx1FahqopXa3oKYORu/SF+D243bEFQ==
 
 "@grammyjs/types@^2.2.6", "@grammyjs/types@^2.3.1", "@grammyjs/types@^2.8.1":
   version "2.8.1"
