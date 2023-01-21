@@ -24,7 +24,7 @@
 		"@grammyjs/types": "^2.3.1",
 		"@sindresorhus/tsconfig": "^3.0.1",
 		"@types/node": "^16.11.6",
-		"ava": "^4.0.0",
+		"ava": "^5.1.1",
 		"dotenv": "^16.0.1",
 		"typescript": "^4.7.4",
 		"xo": "^0.50.0"
